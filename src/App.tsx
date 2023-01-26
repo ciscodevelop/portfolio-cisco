@@ -1,56 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+ 
+import { useState } from 'react';
+import './app.scss';
+import About from './components/pages/about/About';
+
+import Home from "./components/pages/home/Home";
+import Projects from './components/pages/projects/Projects';
+import Skills from './components/pages/skills/Skills';
+import NavBar from './components/shared/navbar/NavBar';
+import Menu from './components/shared/menu/Menu';
+import Contact from './components/pages/contact/Contact';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
+    <div className="app">
+      <header className="app-header">
+        <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       </header>
+      <main className='section'>
+        <Home />        
+        <Skills />
+        <Projects />
+        <About />
+        <Contact/>
+        
+      </main>
     </div>
   );
 }
