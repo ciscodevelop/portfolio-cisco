@@ -8,7 +8,7 @@ interface skillsProps {
   img: string;
 }
 interface skillsListProps {
-  id: string;
+  id: number;
   title: string;
 }
 interface SkillsData {
@@ -16,15 +16,15 @@ interface SkillsData {
 }
  
 function Skills() {   
-  const [SelectedCategory, setSelected] = useState  ("frontend");
+  const [SelectedCategory, setSelected] = useState  (0);
   const [DataSkills, setDataSkills] = useState<skillsProps[]>([]);
   
   useEffect(() => {
     const skillsData:SkillsData = {
-      frontend: FrontEnd,
-      backend: BackEnd,
-      design: Design,
-      dataBase: DataBase
+      0: FrontEnd,
+      1: BackEnd,
+      2: Design,
+      3: DataBase
     }
     setDataSkills(skillsData[SelectedCategory]);
     console.log('passed');
@@ -32,10 +32,10 @@ function Skills() {
   }, [SelectedCategory]);
 
   const listCategory: skillsListProps[] = [
-    { id: "frontend", title: "Frontend" },
-    { id: "backend", title: "Backend" },
-    { id: "design", title: "Design" },
-    { id: "dataBase", title: "Data Base" },
+    { id: 0, title: "Frontend" },
+    { id: 1, title: "Backend" },
+    { id: 2, title: "Design" },
+    { id: 3, title: "Data Base" },
   ];
 
   return (
