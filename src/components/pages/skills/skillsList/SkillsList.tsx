@@ -2,7 +2,7 @@ import { Dispatch } from "react";
 import "./skillsList.scss";
 
 interface Props {
-  id?: string;
+  id?: number;
   title: string;
   active: boolean;
   setSelected: Dispatch<any>;
