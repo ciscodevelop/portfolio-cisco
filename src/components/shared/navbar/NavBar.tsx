@@ -7,7 +7,7 @@ const NavBar=({menuOpen,setMenuOpen}:any)=> {
       <div className="wrapper">
         <div className="left">
           <a href="#home" className="logo">
-            Cisco
+           <img className="logo-img" src="asset/logo.png" alt="" /> Cisco
           </a>
           <div className="item-container">
             <Icon name="award" className="icon" />
