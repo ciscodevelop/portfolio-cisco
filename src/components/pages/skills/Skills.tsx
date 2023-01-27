@@ -20,6 +20,7 @@ function Skills() {
   const [SelectedCategory, setSelected] = useState<number>(1);
   const [DataSkills, setDataSkills] = useState<skillsProps[]>([]);
   useEffect(() => {
+    //inserisco gli array in un oggetto indicizato per poterlo scorrere
     const skillsData:SkillsData = {
       1: FrontEnd,
       2: BackEnd,
@@ -27,7 +28,7 @@ function Skills() {
       4: DataBase
     }
     setDataSkills(skillsData[SelectedCategory]);
-    console.log('passed');
+     
     
   }, [SelectedCategory]);
 

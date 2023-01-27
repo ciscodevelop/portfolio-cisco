@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import "./home.scss";
 import { Typewriter } from "react-simple-typewriter";
 

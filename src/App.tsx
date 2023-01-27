@@ -12,7 +12,7 @@ import Contact from './components/pages/contact/Contact';
 
 function App() {
   const [MenuOpen, setMenuOpen] = useState(false)
-  const [ColorBlack, setColorBlack] = useState(false)
+  const [ColorDark, setColorDark] = useState(false)
   return (
     <div className="app">
       <header className="app-header">

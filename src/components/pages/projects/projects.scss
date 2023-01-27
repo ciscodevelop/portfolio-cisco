@@ -1,5 +1,114 @@
-.projects-container{
-    width: 100%;
-    height:100vh;
-   
-    background-color: rgb(17, 0, 255);}
+.projects-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: crimson;
+  position: relative;
+  
+
+  .slider {
+    
+    height: 80%;
+    display: flex;
+    position: absolute;
+    transition: all 1s ease-in;
+    left: -0vw;
+    //transform: translateX(-200vw);
+    .slide-container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .item {
+        width:60%;
+        height: 100%;
+        display: flex;
+        background-color: aliceblue;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+        .left {
+          flex: 4;
+          display: flex;
+          height: 80%;
+          align-items: center;
+          justify-content: center;
+
+          .left-container {
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .img-container {
+              width: 30%;
+              height: 30%;
+              display: flex;
+              border-radius: 50%;
+              background: rgb(225, 170, 5);
+              justify-content: center;
+              align-items: center;
+              img {
+                object-fit: contain;
+                width: 55px;
+              }
+            }
+            h2 {
+              font-size: 20px;
+              letter-spacing: 0.3rem;
+            }
+            p {
+              font-size: 13px;
+              letter-spacing: 0.1rem;
+            }
+            span {
+              font-size: 12px;
+              letter-spacing: 0.1rem;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+        .right {
+          display: flex;
+          height: 100%;
+          flex: 8;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          img {
+            width: 400px;
+            transform: rotate(-10deg);
+          }
+        }
+      }
+    }
+  }
+  .arrow {  
+    
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    &.left-arrow {
+      left: 3%;
+      transform: rotate(90deg);
+      &:hover{
+        height: 120px;
+        left: 2%;
+       
+        }
+    }
+    &.right-arrow {
+    right:  3%;
+    transform: rotate(-90deg);
+   &:hover{
+    height: 120px;
+    right: 2%;
+    }
+  } 
+  }
+
+  
+}
