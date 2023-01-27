@@ -1,6 +1,7 @@
 {
   "name": "portfolio-cisco",
   "version": "0.1.0",
+  "homepage": "https://ciscodevelop.github.io/portfolio-cisco",
   "private": true,
   "dependencies": {
     "@reacticons/bootstrap-icons": "^1.9.1",
@@ -28,6 +29,8 @@
     "webpack": "^5.75.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -52,6 +55,7 @@
     ]
   },
   "devDependencies": {
-    "@types/ityped": "^1.0.1"
+    "@types/ityped": "^1.0.1",
+    "gh-pages": "^5.0.0"
   }
 }
