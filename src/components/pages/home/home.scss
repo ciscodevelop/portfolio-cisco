@@ -6,21 +6,28 @@
   align-items: center;
   overflow: hidden;
   letter-spacing: 0.3rem;
+  background-color: $mainColorBG;
   .left {
     flex: 0.5;
+    height: 100%;
     overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
     .img-container {
-      width: 900px;
-      height: 700px;
-      background: crimson;
-      border-radius: 10% 40% 10%;
+      width: 800px;
+      height: 600px;
+      background: #dc143c;
+      border-radius: 10% 40% 10% rgba(0, 0, 0,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
       float: right;
+      box-shadow: 5px 5px 15px 3px  #00000083;
+       border-top-right-radius: 40%;
+      border-top-left-radius: 10%;
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 10%;
       //margin-left: 50px;
 
       .img {
@@ -59,11 +66,12 @@
     }
      a {
         position: absolute;
-        bottom: 30px;
+        bottom: 40px;
         left: 40%;
         img {
           width: 40px;
-          animation: arrowBlink 2s  infinite;
+          
+          animation: arrowBlink  3s   infinite  ;
          }
          @keyframes arrowBlink {
           50%{opacity: 1;}

@@ -2,7 +2,7 @@
 .navbar-container {
   width: 100%;
   height: 100px;
-  background-color: #f0f8ff;
+  background-color:$mainColorBgNavBar;
   color: $mainColor;
   position: fixed;
   z-index: 5;
@@ -49,7 +49,7 @@
         font-size: 55px;
         font-weight: 700;
         text-decoration: line-through;
-        color: #00fff7;
+        color: $mainColorLogo;
         transition: all 2s ease-in-out;
         animation: logo-animation;
         
@@ -95,18 +95,19 @@
   }
   &.active {
     background-color: $mainColor;
-    color: #00fff7;
+    color: $mainColorLinksMenuOpen;
+     
     .hamburger {
       span {
         &:first-child {
-          background-color: #00fff7;
+          background-color:$mainColorLogo;
           transform: rotate(45deg);
         }
         &:nth-child(2) {
           opacity: 0;
         }
         &:last-child {
-          background-color: #f0f8ff;
+          background-color: $mainColorLogo ;
           transform: rotate(-45deg);
         }
       }

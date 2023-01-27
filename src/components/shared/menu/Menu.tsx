@@ -1,33 +1,42 @@
 import "./menu.scss";
 
 function Menu({ menuOpen, setMenuOpen }: any) {
+  const menuLinks = [
+    {
+      name: "Home",
+      link: "#home",
+      onClick: () => setMenuOpen(false)
+    },
+    {
+      name: "Skills",
+      link: "#skills",
+      onClick: () => setMenuOpen(false)
+    },
+    {
+      name: "Projects",
+      link: "#projects",
+      onClick: () => setMenuOpen(false)
+    },
+    {
+      name: "About",
+      link: "#about",
+      onClick: () => setMenuOpen(false)
+    },
+    {
+      name: "Contact",
+      link: "#contact",
+      onClick: () => setMenuOpen(false)
+    }
+  ];
   return (
     <div className={`menu  ${menuOpen && "active"}`}>
-      <ul onClick={() => setMenuOpen(false)}>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-      </ul>
-      <ul onClick={() => setMenuOpen(false)}>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-      </ul>
-      <ul onClick={() => setMenuOpen(false)}>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-      </ul>
-      <ul onClick={() => setMenuOpen(false)}>
-        <li>
-          <a href="#about">About</a>
-        </li>
-      </ul>
-      <ul onClick={() => setMenuOpen(false)}>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      {menuLinks.map(({ name, link, onClick }) => (
+        <ul onClick={onClick}>
+          <li>
+            <a href={link}>{name}</a>
+          </li>
+        </ul>
+      ))}
     </div>
   );
 }

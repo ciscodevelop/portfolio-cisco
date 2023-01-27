@@ -11,12 +11,13 @@ import Menu from './components/shared/menu/Menu';
 import Contact from './components/pages/contact/Contact';
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [MenuOpen, setMenuOpen] = useState(false)
+  const [ColorBlack, setColorBlack] = useState(false)
   return (
     <div className="app">
       <header className="app-header">
-        <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <NavBar menuOpen={MenuOpen} setMenuOpen={setMenuOpen} />
+        <Menu menuOpen={MenuOpen} setMenuOpen={setMenuOpen}/>
       </header>
       <main className='section'>
         <Home />        
