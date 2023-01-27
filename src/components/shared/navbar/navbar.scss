@@ -1,47 +1,59 @@
 @import "../../../sass/global.scss";
 .navbar-container {
   width: 100%;
-  height: 70px;
+  height: 100px;
   background-color: #f0f8ff;
   color: $mainColor;
   position: fixed;
   z-index: 5;
   .wrapper {
     width: 100%;
-    height: 70px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+   // padding: 10px 30px;
 
     .left {
       display: flex;
       justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 100%;
+      left: 10px;
       .logo-img {
-         position: relative;       
-        height: 45px;
-        padding-right: 0px;
-        left:  7px;
-        transition: all 0.2s ease ;
-        animation: animatelogo  12s ease-in-out infinite;
-        @keyframes animatelogo {
-            50%{
-                 
-               transform:  rotate(180deg);
-            }             
-            100%{
-                transform:  rotate(360deg);
-            }
-            
-        }       
+        position: relative;
+        height: 45px;        
+        left: 1.5px;  
+        top: -4px;
+
         
+        transform-origin:right ;
+        animation: animatelogo 15s ease-in-out infinite;        
+        @keyframes animatelogo {
+          0% {
+            transform: rotate(0deg);
+          }
+          50% {
+            transform: rotate(180deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
       }
       .logo {
+        display: flex;
+        align-items: center;
+        height: 100%; 
         font-size: 55px;
         font-weight: 700;
-        text-decoration: line-through;         
+        text-decoration: line-through;
         color: #00fff7;
-    }
+        transition: all 2s ease-in-out;
+        animation: logo-animation;
+        
+      }
       .item-container {
         display: flex;
         align-items: center;
@@ -64,6 +76,9 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
+        transition: all 2s ease-in-out;
+        //padding-left: 10px;
+        margin-right: 10px;
 
         span {
           width: 100%;
@@ -71,6 +86,9 @@
           background-color: $mainColor;
           transform-origin: left;
           transition: all 1.2s ease-in-out;
+        }
+        &:hover{
+          justify-content: space-around;
         }
       }
     }
@@ -81,7 +99,7 @@
     .hamburger {
       span {
         &:first-child {
-          background-color:#00fff7;;
+          background-color: #00fff7;
           transform: rotate(45deg);
         }
         &:nth-child(2) {
