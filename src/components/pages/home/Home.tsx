@@ -9,6 +9,7 @@ function Home() {
       <div className="left">
         <div className="img-container">
           <img src="asset/pngwing.com.png" alt="developer" />
+          <img src="public/asset/ciscoImage.jpeg " alt="test" />
         </div>
       </div>
       <div className="right">
