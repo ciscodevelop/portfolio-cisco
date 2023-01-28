@@ -1,51 +1,80 @@
 @import "../../../sass/global.scss";
-.about-container{
-   
+.about-container {
+  display: flex;
+  background-color: aliceblue;
+  @include mobile {
+    flex-direction: column;
+  }
+  .left {
+    flex: 6;
+    width: 90%;
     display: flex;
-    background-color: lightcoral;
-    .left{
-        flex:6;
-        width: 80%;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        .img-container{
-             padding: 10px;
-            img{
-                width: 500px;
-                height: 500px;
-                border-radius: 10px;
-                object-fit: cover;
-
-            }
-        }
+    justify-content: right;
+    align-items: center;
+    @include mobile {
+      margin: 10px;
     }
-    .right{
-        display: flex;
-        flex: 6;
-        justify-content:center;
-        //align-items:center;;
+    .img-container {
+      padding: 10px;
+      display: flex;
+      @include mobile {
         flex-direction: column;
-        .wrapper{
-            display: flex;
-           flex-direction: column;
-             
-            h1{
-                font-size: 32px;
-                font-weight: 600;
-                color: $mainColorLogo;
-            }
-            h2{
-                font-size: 32px;
-                color: $mainColor;
-            }
-            p{
-                font-size: 20px;
-                font-weight: 700;
-                width: 500px;
-                color: $mainColorLinks;
-            }
+      }
+      img {
+        width: 500px;
+        height: 500px;
+        border-radius: 10px;
+        object-fit: cover;
+        @include mobile {
+          width: 350px;
+          height: 300px;
+          object-fit: contain;
+          border-radius: 140px;
         }
+      }
     }
+  }
+  .right {
+    display: flex;
+    flex: 6;
+    justify-content: center;
+    //align-items:center;;
+    flex-direction: column;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      @include mobile {
+        align-items: center;
+      }
 
+      h1 {
+        font-size: 32px;
+        font-weight: 600;
+        color: $mainColorLogo;
+        @include mobile {
+          align-items: center;
+          height: 120px;
+        }
+      }
+      h2 {
+        font-size: 32px;
+        color: $mainColor;
+        @include mobile {
+          align-items: center;
+          height: 120px;
+        }
+      }
+      p {
+        font-size: 20px;
+        font-weight: 700;
+        width: 500px;
+
+        @include mobile {
+          font-size: 20px;
+          font-weight: 700;
+          width: 300px;
+        }
+      }
+    }
+  }
 }

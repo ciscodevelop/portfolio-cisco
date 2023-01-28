@@ -9,8 +9,8 @@ $mainColorLinksMenuOpen:#00fff7;
 $mainColorLinks:#f0f8ff;
 $width:600px;
 
-// @mixin mobile{
-//     @media (max-width:#{$width}) {
-//         @content
-//     }
-// }
+@mixin mobile{
+    @media (max-width:#{$width}) {
+        @content
+    }
+}

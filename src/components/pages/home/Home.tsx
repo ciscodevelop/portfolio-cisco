@@ -8,8 +8,8 @@ function Home() {
     <div className="home-container" id="home">
       <div className="left">
         <div className="img-container">
-          <img src="asset/pngwing.com.png" alt="developer" />
-          <img src="public/asset/ciscoImage.jpeg " alt="test" />
+          <img src="/portfolio-cisco/asset/pngwing.com.png" alt="developer" />
+           
         </div>
       </div>
       <div className="right">

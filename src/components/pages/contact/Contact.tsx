@@ -2,7 +2,7 @@ import   './contact.scss'
 import { Typewriter } from "react-simple-typewriter";
 function Contact() {
   return (
-    <div className="contact-container" id="about">
+    <div className="contact-container" id="contact">
       <div className="left">
         <div className="img-container">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEpzmNpCLm-iklm5ZookCj0_vDpptHTH9oEGe7VpjWJTxub73r6jZM9SLz6t9QL8owsVM&usqp=CAU" alt="" />

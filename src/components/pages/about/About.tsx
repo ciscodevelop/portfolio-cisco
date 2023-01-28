@@ -6,7 +6,7 @@ function About() {
     <div className="about-container" id="about">
       <div className="left">
         <div className="img-container">
-          <img src="asset/ciscoImage.jpeg" alt="" />
+          <img src="/portfolio-cisco/asset/ciscoImage.jpeg" alt="" />
         </div>
       </div>
       <div className="right">

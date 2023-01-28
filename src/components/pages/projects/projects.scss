@@ -1,3 +1,4 @@
+@import "../../../sass/global.scss";
 .projects-container {
   display: flex;
   position: relative;
@@ -5,30 +6,41 @@
   align-items: center;
   background-color: crimson;
   position: relative;
-  
 
   .slider {
-    
     height: 80%;
     display: flex;
     position: absolute;
-    transition: all 1s ease-in;
+    transition: all 1.2s ease-in-out;
+    
     left: -0vw;
+    @include mobile {
+      justify-content: center;
+      align-items: center;
+    }
     //transform: translateX(-200vw);
+
     .slide-container {
       width: 100vw;
       display: flex;
       align-items: center;
       justify-content: center;
+      @include mobile {
+        height: 85%;
+        flex-direction: column;
+      }
 
       .item {
-        width:60%;
+        width: 60%;
         height: 100%;
         display: flex;
         background-color: aliceblue;
         border-radius: 20px;
         align-items: center;
         justify-content: center;
+        @include mobile {
+          flex-direction: column;
+        }
         .left {
           flex: 4;
           display: flex;
@@ -43,25 +55,38 @@
             flex-direction: column;
             justify-content: space-between;
             .img-container {
-              width: 30%;
+              width: 20%;
               height: 30%;
               display: flex;
               border-radius: 50%;
               background: rgb(225, 170, 5);
               justify-content: center;
               align-items: center;
+              @include mobile {
+                object-fit: cover;
+              }
+
               img {
-                object-fit: contain;
+                display: flex;
+                object-fit: cover;
                 width: 55px;
+                @include mobile {
+                  width: 50%;
+                  height: 50%;
+                  object-fit: cover;
+                }
               }
             }
             h2 {
-              font-size: 20px;
-              letter-spacing: 0.3rem;
+              font-size: 18px;
+              letter-spacing: 0.1rem;
             }
             p {
-              font-size: 13px;
+              font-size: 12px;
               letter-spacing: 0.1rem;
+              @include mobile {
+                font-size: 8px;
+              }
             }
             span {
               font-size: 12px;
@@ -81,34 +106,43 @@
           img {
             width: 400px;
             transform: rotate(-10deg);
+            @include mobile {
+              object-fit: contain;
+            }
           }
         }
       }
     }
   }
-  .arrow {  
-    
+  .arrow {
     height: 100px;
     position: absolute;
+    opacity: 0.3;
     cursor: pointer;
+
     &.left-arrow {
       left: 3%;
       transform: rotate(90deg);
-      &:hover{
+      @include mobile {
+        left: -25px;
+      }
+      &:hover {
         height: 120px;
         left: 2%;
-       
-        }
+        opacity: 1;
+      }
     }
     &.right-arrow {
-    right:  3%;
-    transform: rotate(-90deg);
-   &:hover{
-    height: 120px;
-    right: 2%;
+      right: 3%;
+      transform: rotate(-90deg);
+      @include mobile {
+        right: -25px;
+      }
+      &:hover {
+        height: 120px;
+        right: 2%;
+        opacity: 1;
+      }
     }
-  } 
   }
-
-  
 }

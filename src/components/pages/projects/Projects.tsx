@@ -53,13 +53,13 @@ function Projects() {
       </div>
       <img
         className="arrow left-arrow"
-        src="asset/DownArrow.png"
+        src="portfolio-cisco/asset/DownArrow.png"
         alt=""
         onClick={() => handleClick("prev")}
       />
       <img
         className="arrow right-arrow"
-        src="asset/DownArrow.png"
+        src="portfolio-cisco/asset/DownArrow.png"
         alt=""
         onClick={() => handleClick()}
       />
