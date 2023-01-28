@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/portfolio-cisco/static/css/main.5d1d6763.css",
-    "main.js": "/portfolio-cisco/static/js/main.3fba0dce.js",
+    "main.js": "/portfolio-cisco/static/js/main.5da9f399.js",
     "index.html": "/portfolio-cisco/index.html",
     "main.5d1d6763.css.map": "/portfolio-cisco/static/css/main.5d1d6763.css.map",
-    "main.3fba0dce.js.map": "/portfolio-cisco/static/js/main.3fba0dce.js.map"
+    "main.5da9f399.js.map": "/portfolio-cisco/static/js/main.5da9f399.js.map"
   },
   "entrypoints": [
     "static/css/main.5d1d6763.css",
-    "static/js/main.3fba0dce.js"
+    "static/js/main.5da9f399.js"
   ]
 }
