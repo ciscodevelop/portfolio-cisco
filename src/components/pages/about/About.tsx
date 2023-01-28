@@ -1,5 +1,6 @@
 import "./about.scss";
-
+import { Typewriter } from "react-simple-typewriter";
+//" Email: ciscodevelop@gmail.com", "Phone: +39 373 82 19 139", "Linkedin: ciscodevelop"
 function About() {
   return (
     <div className="about-container" id="about">
@@ -11,7 +12,16 @@ function About() {
       <div className="right">
         <div className="wrapper">
           <h2>About Me</h2>
-          <h1>Francesco Papa</h1>
+          <h1>
+            <Typewriter
+              loop={0}
+              typeSpeed={190}
+              deleteSpeed={90}
+              delaySpeed={2500}
+              cursor
+              words={["Passion For Code", "Creativity", "Professional"]}
+            />
+          </h1>
           <p>
             Hello everyone, my name is Francesco Papa and I'm a web developer. I
             started out learning programming languages ​​like HTML, CSS, and
